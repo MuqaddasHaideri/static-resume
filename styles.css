@@ -1,0 +1,309 @@
+/* Header */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+body h2{
+    color:#A7818C
+}
+
+body,
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.header-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C29DB6;
+    color: white;
+    padding: 16px;
+}
+
+.main-header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left h1 {
+    padding: 10px;
+    font-size: 30px;
+    margin: 0;
+    font-family: "Dancing Script", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+
+.header-right ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-family: "Dancing Script",
+}
+
+.header-right ul li {
+    display: inline;
+}
+
+.header-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Caveat", system-ui;
+    font-size: 26px;
+
+}
+
+.header-right ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Personal Info */
+#personal-info {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+
+}
+
+.personal-info-container {
+    display: flex;
+}
+
+.profile-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: slideInFromRight 1s ease-out;
+}
+
+
+.personal-info-name {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-family: "Dancing Script", system-ui;
+    font-size: 20px;
+
+}
+
+.about {
+    font-family: "Caveat", system-ui;
+    font-size: 30px;
+    font-weight: 400;
+    /* height: 200;
+    width: 200; */
+    animation: slideInFromLeft 2s ease-out;
+
+}
+
+.about a {
+    color: #E7B197
+}
+
+/* education */
+#education-info {
+    padding: 20px;
+     margin: 20px 0;
+}
+
+.education h2 {
+    font-family: "Dancing Script", system-ui;
+    font-size: 40px;
+    font-optical-sizing: auto;
+    font-weight: bold;
+}
+
+.education p {
+    font-family: "Caveat", system-ui;
+    font-size: 30px;
+    animation: slideInFromLeft 2s ease-out;
+}
+#skills-info {
+    padding: 20px;
+     margin: 20px 0;
+}
+
+.skills-container h2 {
+    font-family: "Dancing Script", system-ui;
+    font-size: 40px;
+    font-optical-sizing: auto;
+    font-weight: bold;
+}
+.skill-list li{
+    height: 50px;
+    width: 150px;
+    padding:10px;
+    display: flex;
+    background-color: #E7B197;
+    color: white;
+    font-family: "Caveat", system-ui;
+    font-size: 30px;
+    border-radius: 20px;
+    display: inline;
+    flex-direction: row; 
+    text-align: center;
+    animation: slideInFromLeft 2s ease-out;
+  
+
+}
+.skill-list {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+.skills-container h5{
+    font-family: "Caveat", system-ui;
+    font-size: 30px;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    animation: slideInFromRight 2s ease-out;
+    
+}
+.hidden {
+    display: none;
+}
+#toggleSkillsButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #E7B197;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggleSkillsButton:hover {
+    background-color: #d5a38a;
+}
+/* work experience */
+#work-info {
+    padding: 20px;
+     margin: 20px 0;
+}
+.work-Experience h2 {
+    font-family: "Dancing Script", system-ui;
+    font-size: 40px;
+    font-optical-sizing: auto;
+    font-weight: bold;
+}
+.work-Experience p {
+    font-family: "Caveat", system-ui;
+    font-size: 30px;
+    animation: slideInFromLeft 2s ease-out;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        z-index: -1;
+        position: sticky;
+        z-index: 1000;
+        top: 0,
+    }
+
+    .header-left h1 {
+        font-size: 1.8em;
+    }
+
+    .header-left h2 {
+        font-size: 1em;
+    }
+
+    .header-right ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .personal-info-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .header-right ul {
+        display: none;
+    
+    }
+.skill-list {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;  
+gap: 20px;
+list-style: none;
+padding: 0;
+    
+
+}
+.skill-list li{
+    margin-bottom: 20px;
+    
+}
+
+
+}
